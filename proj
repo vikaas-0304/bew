@@ -1,0 +1,242 @@
+1.a.
+
+<html>
+<head>
+<title>SRCAS</title>
+</head>
+<body style="background-color:ivory">
+<center><h1>Sri Ramakrishna College of Arts and Science</h1></center>
+<center><h3>Coimbatore - 641006</h3></center>
+<center>
+ <table border = "1">
+ <caption><b>PROGRAMMES AVAILABLE</b></caption>
+<thead>
+<th>Undergraduates</th>
+<th>Post Graduates</th>
+</thead>
+<tbody>
+<tr>
+<td>BSc Computer Science</td>
+<td>MSc Computer Science</td>
+<td><img src ="E:\Logos\logo_Srcas.png " width = "100" height = "100"/><td>
+</tr>
+<tr>
+<td>BSc Information Technology</td>
+<td>MSc Information Technology</td>
+</tr>
+<tr>
+<td>BCA</td>
+<td>MCA</td>
+</tr>
+<tr>
+<td>B Com </td>
+<td>MCom</td>
+<tr>
+<td>BA English Literature</td>
+<td>MA English Literature</td>
+</tr>
+<tr>
+<th rowspan="2">PG Diploma</th>
+<td>PGDCA</td>
+</tr>
+<tr>
+<td>PGDAC</td>
+</tr>
+<tr>
+<td colspan ="2"> All Programmes Affiliated to Bharathiar University</td>
+</tr>
+</table>
+</center>
+<h2>Quick Links</h2>
+<ol>
+<li><a href="home.html">Home Page</a></li>
+<li><a href="fee.html">Fees Details</a></li>
+<li><a href="lib.html">Library</a></li>
+</ol>
+</body>
+</html>
+
+
+
+
+1.b.
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+  text-align: center;
+}
+</style>
+<body>
+<h2>II BSc-IT-S2 TIME TABLE</h2>
+<table style="width:100%">
+  <tr>
+    <th>DAY ORDER</th>
+    <th>I-Hr (1.15pm-2.05pm)</th>
+    <th>II-Hr (2.05pm-2.55pm)</th>
+    <th>III-Hr (3.10pm-4.00pm)</th>
+    <th>IV-Hr (4.00pm-4.50pm)</th>
+    <th>V-Hr (4.50pm-5.40pm)</th>
+  </tr>
+  <tr>
+    <td>I DAY</td>
+    <td>WEB</td>
+    <td>BC</td>
+    <td>POWER BI</td>
+    <td>ACC</td>
+    <td>CN</td>
+  </tr>
+  <tr>
+    <td>II DAY</td>
+    <td>CN</td>
+    <td>BC</td>
+    <td>ACC</td>
+    <td>POWER BI</td>
+    <td>AI</td>
+  </tr>
+  <tr>
+    <td>III DAY</td>
+    <td>ACC</td>
+    <td>AI</td>
+    <td colspan="3">WEB LAB</td>
+  </tr>
+  <tr>
+    <td>IV DAY</td>
+    <td>BC</td>
+    <td>WEB</td>
+    <td>ACC</td>
+    <td>AI</td>
+    <td>POWER BI</td>
+  </tr>
+  <tr>
+    <td>V DAY</td>
+    <td>WEB</td>
+    <td>CN</td>
+    <td>BC</td>
+    <td>AI</td>
+    <td>ACC</td>
+  </tr>
+  <tr>
+    <td>VI DAY</td>
+    <td>CN</td>
+    <td>WEB</td>
+    <td colspan="3">POWER BI LAB</td>
+  </tr>
+</table>
+</body>
+</html>
+
+
+
+2.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internal and External Linking Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        nav {
+            margin-bottom: 20px;
+        }
+        nav a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #2980b9;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation links -->
+<h2>INTERNAL LINK </h2>
+
+    <nav>
+        <a href="#colors">Colors</a>
+        <a href="#fruits">Fruits</a>
+        <a href="#vegetables">Vegetables</a>
+        <a href="#drinks">Health Drinks</a>
+    </nav>
+
+    <!-- Content sections -->
+    <section id="colors">
+      <h2> List of Colors </h2>
+        <ol>
+          <li> Red</li>
+          <li>Green</li>
+          <li>Blue</li>
+          <li>Yellow</li>
+          <li>Black</li>
+          <li>Brown</li>
+          <li>Lavendar</li>
+          <li>Pink</li>
+      </ol>
+    </section>
+
+    <section id="fruits">
+        <h2> List of Fruits </h2>
+        <ol>
+          <li> Apple</li>
+          <li>Grape</li>
+          <li>Orange</li>
+          <li>Banana</li>
+          <li>Papaya</li>
+          <li>Muskmelon</li>
+          <li>Lemon</li>
+          <li>Mangoe</li>
+      </ol>
+    </section>
+
+    <section id="vegetables">
+         <h2> List of Vegetables </h2>
+        <ol>
+          <li> Carrot</li>
+          <li>Beans</li>
+          <li>Broccoli</li>
+          <li>Potato</li>
+          <li>Cabbage</li>
+          <li>Spinach</li>
+          <li>Cauliflower</li>
+          <li>Brinjal</li>
+      </ol>
+    </section>
+
+    <section id="drinks">
+        <h2> List of Health Drinks </h2>
+        <ol>
+          <li> Green Tea</li>
+          <li>Lemon Juice</li>
+          <li>Coconut Water</li>
+          <li>Vegetable Soup</li>
+          <li>Mint Water</li>
+          <li>Beetroot Juice</li>
+          <li>Lassi</li>
+          <li>Protein Shakes</li>
+      </ol>
+    </section>
+<h2>EXTERNAL LINK </h2>
+
+<h2>Absolute URLs</h2>
+<p><a href="https://www.srcas.ac.in/" target="_blank">SRI RAMAKRISHNA COLLEGE OF ARTS & SCIENCE</a></p>
+<p><a href="https://pbx.johnsamuel.in/login.php" target="_blank">PBX</a></p>
+
+</body>
+</html>
+
+
