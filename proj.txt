@@ -129,6 +129,8 @@ table, th, td {
 
 
 
+
+
 2.
 <!DOCTYPE html>
 <html lang="en">
@@ -240,3 +242,315 @@ table, th, td {
 </html>
 
 
+
+
+
+3.
+<html >
+<head>
+    <title>Video and Audio</title>
+</head>
+<body>
+    <h1>Embedding Video and Audio</h1>
+    
+    <!-- Video Section -->
+    <h2>Video Example</h2>
+    <video width="640" height="360" controls>
+        <source src="file_example_MP4_480_1_5MG.mp4" type="video/mp4">
+               Your browser does not support the video tag.
+    </video>
+    <!-- Audio Section -->
+    <h2>Audio Example</h2>
+    <audio controls>
+        <source src="file_example_MP3_700KB.mp3" type="audio/mpeg">
+                Your browser does not support the audio tag.
+    </audio>
+</body>
+</html>
+
+
+
+
+
+4.
+<html>
+  <body>
+    <canvas id="myCanvas" width="200" height="180" style="border:1px solid #d3d3d3;">
+      Your browser does not support the HTML canvas tag.
+    </canvas>
+    <script>
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+
+      var grd = ctx.createLinearGradient(0, 0, 170, 0);
+      grd.addColorStop(0, "black");
+      grd.addColorStop(0.3, "magenta");
+      grd.addColorStop(0.5, "blue");
+      grd.addColorStop(0.6, "green");
+      grd.addColorStop(0.8, "yellow");
+      grd.addColorStop(1, "red");
+
+      ctx.fillStyle = grd;
+      ctx.fillRect(20, 20, 150, 100);
+
+      ctx.font = "20px Arial";
+      ctx.fillStyle = "white";
+      ctx.fillText("Click a color!", 50, 150);
+
+      function getColorAtPosition(x, y) {
+        var tempCanvas = document.createElement("canvas");
+        var tempCtx = tempCanvas.getContext("2d");
+        tempCanvas.width = c.width;
+        tempCanvas.height = c.height;
+        tempCtx.drawImage(c, 0, 0);
+
+        var pixel = tempCtx.getImageData(x, y, 1, 1).data;
+        var r = pixel[0];
+        var g = pixel[1];
+        var b = pixel[2];
+        var a = pixel[3];
+
+        return `rgba(${r}, ${g}, ${b}, ${a / 255})`;
+      }
+
+      c.addEventListener("click", function(event) {
+        var rect = c.getBoundingClientRect();
+        var x = event.clientX - rect.left;
+        var y = event.clientY - rect.top;
+
+        var clickedColor = getColorAtPosition(x, y);
+
+        ctx.clearRect(0, 0, c.width, c.height);
+        ctx.fillStyle = grd;
+        ctx.fillRect(20, 20, 150, 100);
+        ctx.fillStyle = clickedColor;
+        ctx.fillText("Click a color!", 50, 150);
+      });
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+5.
+index
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRCAS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Sri Ramakrishna College of Arts and Science</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses & Fees</a></li>
+                <li><a href="library.html">Library</a></li>
+                <li><a href="hostel.html">Hostel</a></li>
+                <li><a href="sports.html">Sports</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>About Us</h2>
+            <p>Welcome to SRCAS, a hub for education and innovation. We offer a wide range of facilities to ensure quality education and an enriching experience.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 SRCAS. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+
+courses
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses & Fee Structures</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Courses & Fee Structures</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses & Fees</a></li>
+                <li><a href="library.html">Library</a></li>
+                <li><a href="hostel.html">Hostel</a></li>
+                <li><a href="sports.html">Sports</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Available Courses</h2>
+        <ul>
+            <li>Bachelor of Science (B.Sc.) - $5000/year</li>
+            <li>Bachelor of Arts (B.A.) - $4500/year</li>
+            <li>Bachelor of Technology (B.Tech) - $7000/year</li>
+            <li>Master of Science (M.Sc.) - $6000/year</li>
+        </ul>
+    </main>
+    <footer>
+        <p>&copy; 2024 SRCAS. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+
+sports
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Sports</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>About Sports</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses & Fees</a></li>
+                <li><a href="library.html">Library</a></li>
+                <li><a href="hostel.html">Hostel</a></li>
+                <li><a href="sports.html">Sports</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Sports Facilities</h2>
+        <p>We have state-of-the-art facilities for sports including football, basketball, cricket, and more.</p>
+    </main>
+    <footer>
+        <p>&copy; 2024 SRCAS. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+
+
+hostel
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Facility</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Hostel Facility</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses & Fees</a></li>
+                <li><a href="library.html">Library</a></li>
+                <li><a href="hostel.html">Hostel</a></li>
+                <li><a href="sports.html">Sports</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Hostel Accommodation</h2>
+        <p>We provide well-furnished hostels with 24/7 security and Wi-Fi facilities for students.</p>
+    </main>
+    <footer>
+        <p>&copy; 2024 SRCAS. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+
+
+lib
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Library</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses & Fees</a></li>
+                <li><a href="library.html">Library</a></li>
+                <li><a href="hostel.html">Hostel</a></li>
+                <li><a href="sports.html">Sports</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Library Facilities</h2>
+        <p>Our library is equipped with over 50,000 books, journals, and digital resources for students and faculty.</p>
+    </main>
+    <footer>
+        <p>&copy; 2024 SRCAS. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+
+
+css
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+header h1 {     margin: 0; }
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background: #444;
+}
+nav ul li {
+    margin: 0;
+}
+nav ul li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    background: #555;
+}
+main {
+    padding: 2rem;
+}
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
